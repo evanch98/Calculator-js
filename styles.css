@@ -1,9 +1,13 @@
+/* To display the content in the vertical direction */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* The container for all the calculator components 
+   Display the components in the vertical direction 
+*/
 .calcBody {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,7 @@ body {
     box-sizing: border-box;
 }
 
+/* The display class to manipulate the display div. */
 .display {
     display: flex;
     justify-content: right;
