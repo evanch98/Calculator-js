@@ -35,3 +35,41 @@ function operate(opt, num1, num2) {
         return divide(num1, num2);
     }
 }
+
+// Required elements
+const displayDiv = document.querySelector(".display");
+const buttons = document.querySelectorAll(".btn");
+const buttonR = document.querySelectorAll(".btnr");
+const buttonZ = document.querySelector(".btnz");
+
+// Required variables
+let num1;
+let num2;
+let numString = "";
+
+// Funtion to display numbers on the display when a button is pressed.
+function display(evt) {
+    if (numString.length > 0 && evt.id == '0') {
+        numString += evt.id;
+    }
+    else if (isNaN(evt.id) != true && evt.id != '0') {
+        numString += evt.id;
+    }
+    else if (evt.id == 'p') {
+        numString += '.';
+    }
+    displayDiv.textContent = numString;
+}
+
+// Handling events for buttons
+// ------------------------------- START -------------------------------
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        display(button);
+    });
+});
+
+buttonZ.addEventListener('click', () => {
+    display(buttonZ);
+});
+// -------------------------------- END --------------------------------
