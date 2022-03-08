@@ -6,9 +6,23 @@ body {
 
 .calcBody {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items:center;
     width: 450px;
     height: 719px;
-    border-radius: 50px;
+    border-radius: 30px;
     background-color: #39A6A3;
+    box-sizing: border-box;
+}
+
+.display {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 390px;
+    height: 90px;
+    border-radius: 30px;
+    background-color: #DEEEEA;
+    box-sizing: border-box;
 }
