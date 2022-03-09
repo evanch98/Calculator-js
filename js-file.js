@@ -57,6 +57,9 @@ function display(evt) {
         if (numString[0] != '0'){
             numString += evt.id;
         }
+        else if (numString[0] === '0' && numString[1] === '.') {
+            numString += evt.id;
+        }
     }
 
     // If the evt.id is p, numString will concatenate '.'
